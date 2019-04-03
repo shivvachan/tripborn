@@ -1,0 +1,47 @@
+{
+  "name": "busnext-admin",
+  "version": "1.0.0",
+  "description": "busnext admin dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon ./src/server.js --exec babel-node --presets=@babel/preset-env",
+    "build": "NODE_ENV=production babel ./src -d ./build",
+    "start": "NODE_ENV=production NODE_PATH=./build node ./build/server.js"
+  },
+  "author": "shiva",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
+    "@babel/runtime": "^7.0.0-beta.51",
+    "@mongoosejs/double": "^0.1.2",
+    "async": "^2.6.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "express-session": "^1.15.6",
+    "jwt-simple": "^0.5.5",
+    "mongoose": "^5.4.0",
+    "mongoose-int32": "^0.3.1",
+    "nodemailer": "^4.7.0",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/node": "^7.0.0-beta.51",
+    "@babel/plugin-proposal-export-default": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.51",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.5"
+  }
+}

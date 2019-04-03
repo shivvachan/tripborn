@@ -1,0 +1,12 @@
+apps:
+    - script: ./build/server.js
+      name: "TripBorn_BusNext_Admin_backend"
+      instances: 1
+      watch: true
+      exec_mode: fork
+      env:
+          NODE_ENV: production
+          NODE_PATH: ./build
+      env_production:
+          NODE_ENV: production
+        
